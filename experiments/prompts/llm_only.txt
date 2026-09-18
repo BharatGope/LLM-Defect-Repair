@@ -1,0 +1,30 @@
+You are evaluating a real-world Python software defect.
+
+You are given:
+1. The relevant bug description/context.
+2. The buggy source code or relevant repository files.
+
+Tasks:
+1. Determine whether the code contains a defect related to the reported issue.
+2. Explain the defect and identify its location.
+3. Propose a minimal patch.
+4. Explain why the patch addresses the defect.
+
+Return:
+
+DETECTED: YES or NO
+
+LOCATION:
+<file and relevant code location>
+
+EXPLANATION:
+<technical explanation>
+
+PATCH:
+```diff
+<unified diff>
+
+PATCH_EXPLANATION:
+<why the patch addresses the defect>
+
+Do not use or discuss the developer's patch, fixed revision, hidden test results, or benchmark solution.
