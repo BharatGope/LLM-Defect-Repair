@@ -1,0 +1,40 @@
+experiment_name: LLM-Defect-Repair-FIST-2027
+language: Python
+
+conditions:
+  - LLM_ONLY
+  - STATIC_ANALYSIS
+  - HYBRID
+
+primary_analyzer: Ruff
+
+models:
+  - MODEL_1
+  - MODEL_2
+  - MODEL_3
+
+dataset:
+  benchmark: BugsInPy
+  initial_target: 20
+  language: Python
+
+evaluation:
+  detection:
+    - precision
+    - recall
+    - f1
+    - false_positive_rate
+
+  repair:
+    - patch_generation_rate
+    - test_passing_rate
+    - correct_patch_rate
+    - regression_rate
+
+rules:
+  - Do not provide developer patch to the model
+  - Do not provide fixed commit to the model
+  - Do not provide hidden test results to the model
+  - Preserve original buggy revision
+  - Record infrastructure failures separately
+  - Do not modify benchmark source code

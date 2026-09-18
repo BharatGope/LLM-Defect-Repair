@@ -1,0 +1,1 @@
+project,bug_id,condition,model,patch_file,syntax_valid,relevant_test_pass,full_suite_pass,regression,semantic_correctness,final_status,notes
